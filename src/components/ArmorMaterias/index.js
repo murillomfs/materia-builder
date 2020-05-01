@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FiEdit2 } from 'react-icons/fi';
 
 import { Container } from './styles';
 
@@ -85,6 +86,7 @@ export default function ArmorMaterias({ armorSlots }) {
                     return (
                         <div className={ slot.conn ? `build conn ${color}` : `build ${color}` } key={index}>
                             <div className="tag">
+                                <FiEdit2 size={14} className="tag-edit" />
                                 <label htmlFor={`spot-${index}`}>
                                     <select 
                                         name={`spot-${index}`} 

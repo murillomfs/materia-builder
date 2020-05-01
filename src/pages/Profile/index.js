@@ -62,10 +62,30 @@ export default function Profile() {
                     <label htmlFor="equipment">
                         <img src={equipment} alt="" />
                         <select name="equipment" id="equipment">
-                            <option value="Iron Helmet">Iron Helmet</option>
-                            <option value="Iron Helmet">Crosssword</option>
-                            <option value="Iron Helmet">Mythril Dagger</option>
-                            <option value="Iron Helmet">Ultima Weapon</option>
+                            <option value="Bronze Bangle">Iron Helmet</option>
+                            <option value="Iron Bangle">Iron Bangle</option>
+                            <option value="Star Bracelet">Star Bracelet</option>
+                            <option value="Leather Bracer">Leather Bracer</option>
+                            <option value="Mesmeric Armlet">Mesmeric Armlet</option>
+                            <option value="Titanium Bangle">Titanium Bangle</option>
+                            <option value="Mythril Armlet">Mythril Armlet</option>
+                            <option value="Calignious Bracelet">Calignious Bracelet</option>
+                            <option value="Studded Bracer">Studded Bracer</option>
+                            <option value="Gothic Bangle">Gothic Bangle</option>
+                            <option value="Magician's Bracelet">Magician's Bracelet</option>
+                            <option value="Heavy-Duty Bracer">Heavy-Duty Bracer</option>
+                            <option value="Sorcerer's Armlet">Sorcerer's Armlet</option>
+                            <option value="Cog Bangle">Cog Bangle</option>
+                            <option value="Iron Maiden">Iron Maiden</option>
+                            <option value="Geometric Bracelet">Geometric Bracelet</option>
+                            <option value="Supreme Bracer">Supreme Bracer</option>
+                            <option value="Rune Armlet">Rune Armlet</option>
+                            <option value="Chain Bangle">Chain Bangle</option>
+                            <option value="Force Bracelet">Force Bracelet</option>
+                            <option value="Midgar Bangle">Midgar Bangle</option>
+                            <option value="Shinra Bangle">Shinra Bangle</option>
+                            <option value="Astral Cuff">Astral Cuff</option>
+                            <option value="Corneo Armlet">Corneo Armlet</option> 
                         </select>
 
                         <FiChevronDown size={20} color="#3D9DE2" />
@@ -76,10 +96,35 @@ export default function Profile() {
                     <label htmlFor="accessory">
                         <img src={accessory} alt="" />
                         <select name="accessory" id="accessory">
-                            <option value="Mythril Sword">Gotterdammerung</option>
-                            <option value="Mythril Sword">Crosssword</option>
-                            <option value="Mythril Sword">Mythril Dagger</option>
-                            <option value="Mythril Sword">Ultima Weapon</option>
+                            <option value="Power Wristguards">Power Wristguards</option>
+                            <option value="Bulletproof Vest">Bulletproof Vest</option>
+                            <option value="Earrings">Earrings</option>
+                            <option value="Talisman">Talisman</option>
+                            <option value="Supernatural Wristguards">Supernatural Wristguards</option>
+                            <option value="Survival Vest">Survival Vest</option>
+                            <option value="Platinum Earrings">Platinum Earrings</option>
+                            <option value="Timeworn Talisman">Timeworn Talisman</option>
+                            <option value="Champion Belt">Champion Belt</option>
+                            <option value="Circlet">Circlet</option>
+                            <option value="Star Pendant">Star Pendant</option>
+                            <option value="Headband">Headband</option>
+                            <option value="Protective Boots">Protective Boots</option>
+                            <option value="Tarot Cards">Tarot Cards</option>
+                            <option value="Otherworldly Crystal">Otherworldly Crystal</option>
+                            <option value="Enchanted Ring">Enchanted Ring</option>
+                            <option value="Fury Ring">Fury Ring</option>
+                            <option value="Enfeeblement Ring">Enfeeblement Ring</option>
+                            <option value="Transference Module">Transference Module</option>
+                            <option value="Spectral Cogwheel">Spectral Cogwheel</option>
+                            <option value="Revival Earrings">Revival Earrings</option>
+                            <option value="Crescent Moon Charm">Crescent Moon Charm</option>
+                            <option value="Whistlewind Scarf">Whistlewind Scarf</option>
+                            <option value="Clarity Pendant">Clarity Pendant</option>
+                            <option value="Salvation Badge">Salvation Badge</option>
+                            <option value="Healing Carcanet">Healing Carcanet</option>
+                            <option value="Mythical Amulet">Mythical Amulet</option>
+                            <option value="Moogle’s Amulet">Moogle’s Amulet</option>
+                            <option value="Gotterdammerung">Gotterdammerung</option>
                         </select>
 
                         <FiChevronDown size={20} color="#3D9DE2" />

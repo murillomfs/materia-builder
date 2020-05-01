@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import AuthContext from '../../contexts/auth';
 
 import { Container } from './styles';
 
@@ -7,10 +8,19 @@ import logo from '../../images/logo.png';
 
 export default function Login() {
   let navigate = useNavigate();
+  const { signed, signIn } = useContext(AuthContext);
+  
+  console.log(signed);
 
-  const handleFormSubmit = e => {
+  function handleFormSubmit (e) {
     e.preventDefault();
-    navigate('/home');
+    
+    // const response = await signIn();
+    // console.log(response);
+
+    // navigate('/home');
+
+    signIn();
   }
 
   return (

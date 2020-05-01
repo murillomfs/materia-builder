@@ -1,19 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { FiEdit2 } from 'react-icons/fi';
 
 import SummonMaterias from '../SummonMaterias';
 
 import { Container } from './styles';
-
-// const weaponSlots = [
-//     { spot: 1, conn: true },
-//     { spot: 2, conn: false },
-//     { spot: 3, conn: true },
-//     { spot: 4, conn: false },
-//     { spot: 5, conn: false },
-//     { spot: 6, conn: false },
-//     { spot: 7, conn: false },
-//     { spot: 8, conn: false },
-// ]
 
 const materias = [
     { name: '-- empty', type: '' },
@@ -101,6 +91,7 @@ export default function WeaponMaterias({ weaponSlots }) {
                     return (
                         <div className={ slot.conn ? `build conn ${color}` : `build ${color}` } key={index}>
                             <div className="tag">
+                                <FiEdit2 size={14} className="tag-edit" />
                                 <label htmlFor={`spot-${index}`}>
                                     <select 
                                         name={`spot-${index}`} 

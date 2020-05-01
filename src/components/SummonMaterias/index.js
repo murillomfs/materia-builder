@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import $ from 'jquery';
 
 import { Container } from './styles';
 
@@ -15,7 +16,7 @@ const materias = [
     { name: 'Chocobo Chick', type: 'red' },
 ]
 
-export default function WeaponMaterias({ weaponSlots }) {
+export default function SummonMaterias() {
     const [build, setBuild] = useState([
         { spot: 0, name: '-- empty', type: '' },
     ]);
@@ -34,12 +35,14 @@ export default function WeaponMaterias({ weaponSlots }) {
 
             newArray[elementsIndex] = {...newArray[elementsIndex], name: materia.name, type: materia.type};
 
+            $('.summon-holder').addClass('summon');
+
             setBuild(build);
         }
     }
 
     return (
-        <Container className="build summon">
+        <Container className="build summon-holder">
             <div className="tag">
                 <label htmlFor={`spot-1`}>
                     <select 

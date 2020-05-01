@@ -43,7 +43,8 @@ export const Container = styled.div`
 
     .tag {
         position: absolute;
-        top: -35px;
+        bottom: -45px;
+        top: inherit;
         left: -50%;
         right: -50%;
         margin: auto;
@@ -51,18 +52,26 @@ export const Container = styled.div`
         background: #020109;
         border-radius: 4px;
         padding: 5px;
-        min-width: 100px;
+        min-width: 150px;
         text-align: center;
         display: none;
+        z-index: 10;
+
+        .tag-edit {
+            position: absolute;
+            top: 7px;
+            left: 10px;
+        }
     }
     .tag::after {
         content: '';
-        border-left: 4px solid transparent;
-        border-right: 4px solid transparent;
-        border-top: 4px solid #000;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #000;
+        border-top: inherit;
         position: absolute;
-        top: 100%;
-        left: 14px;
+        bottom: 100%;
+        left: 10px;
     }
     .tag-name { 
         font-size: 11px; 
@@ -90,6 +99,9 @@ export const Container = styled.div`
         background: none;
         border: none;
         text-align: center;
+        padding-left: 35px;
+        z-index: 1;
+        position: relative;
     }
 
     .build.summon::before { background: #BE3B3B; }

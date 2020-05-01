@@ -63,7 +63,7 @@ export const Container = styled.div`
         position: absolute;
         top: 100%;
         left: inherit !important;
-        right: 14px;
+        right: 11px;
     }
     .tag-name { 
         font-size: 11px; 
@@ -93,10 +93,10 @@ export const Container = styled.div`
         text-align: center;
     }
 
-    .build.summon::before { background: #BE3B3B; }
-    .build.summon { margin-left: auto; margin-right: 0; }
+    &::before { background: #BE3B3B; }
+    margin-left: auto; margin-right: 0;
     
-    .build.conn::after {
+    .conn::after {
         content: '';
         width: 15px;
         background: #040F1E;
