@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import AuthContext from '../../contexts/auth';
 import { FiEdit2 } from 'react-icons/fi';
 
 import SummonMaterias from '../SummonMaterias';
@@ -52,17 +53,14 @@ const materias = [
 ]
 
 export default function WeaponMaterias({ weaponSlots }) {
-    const [build, setBuild] = useState([
-        { spot: 0, name: '-- empty', type: '' },
-        { spot: 1, name: '-- empty', type: '' },
-        { spot: 2, name: '-- empty', type: '' },
-        { spot: 3, name: '-- empty', type: '' },
-        { spot: 4, name: '-- empty', type: '' },
-        { spot: 5, name: '-- empty', type: '' },
-        { spot: 6, name: '-- empty', type: '' },
-        { spot: 7, name: '-- empty', type: '' }
-    ]);
+    const { user } = useContext(AuthContext);
+
+    const character = user.characters.find(element => element.slug === 'cloud' );
+    const selectedBuild = character.builds[0].build.weapon;
+
+    const [build, setBuild] = useState(selectedBuild);
     const [select, setSelect] = useState();
+    const [list, setList] = useState(user);
 
     useEffect(() => {
         setSelect();
@@ -72,12 +70,14 @@ export default function WeaponMaterias({ weaponSlots }) {
     function handleChangeMateria(select) {
         if(select){
             const materia = materias.find(element => element.name === select.name )
-            const elementsIndex = build.findIndex(element => element.spot === select.id );
+            const elementsIndex = build.findIndex(element => element.weapon === select.id );
             const newArray = build;
 
             newArray[elementsIndex] = {...newArray[elementsIndex], name: materia.name, type: materia.type};
 
             setBuild(build);
+            setList(user);
+            localStorage.setItem('@Auth:user', JSON.stringify(user));
         }
     }
 
@@ -92,9 +92,9 @@ export default function WeaponMaterias({ weaponSlots }) {
                         <div className={ slot.conn ? `build conn ${color}` : `build ${color}` } key={index}>
                             <div className="tag">
                                 <FiEdit2 size={14} className="tag-edit" />
-                                <label htmlFor={`spot-${index}`}>
+                                <label htmlFor={`weapon-${index}`}>
                                     <select 
-                                        name={`spot-${index}`} 
+                                        name={`weapon-${index}`} 
                                         value={name}
                                         onChange={e => setSelect({ name: e.target.value, id: index })}
                                     >

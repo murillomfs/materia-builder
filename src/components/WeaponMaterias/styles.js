@@ -43,21 +43,21 @@ export const Container = styled.div`
 
     .tag {
         position: absolute;
-        top: -45px;
+        top: -55px;
         left: -50%;
         right: -50%;
         margin: auto;
         color: #fff;
         background: #020109;
         border-radius: 4px;
-        padding: 5px;
+        padding: 10px 5px;
         min-width: 150px;
         text-align: center;
         display: none;
 
         .tag-edit {
             position: absolute;
-            top: 7px;
+            top: 12px;
             left: 10px;
         }
     }
@@ -68,7 +68,7 @@ export const Container = styled.div`
         border-top: 8px solid #000;
         position: absolute;
         top: 100%;
-        left: 10px;
+        left: 20px;
     }
     .tag-name { 
         font-size: 11px; 

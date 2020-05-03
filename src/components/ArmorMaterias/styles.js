@@ -7,7 +7,7 @@ export const Container = styled.div`
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 30px;
+        margin-bottom: 0 !important;
     }
     
     .build {
@@ -43,7 +43,7 @@ export const Container = styled.div`
 
     .tag {
         position: absolute;
-        bottom: -45px;
+        bottom: -55px;
         top: inherit;
         left: -50%;
         right: -50%;
@@ -51,7 +51,7 @@ export const Container = styled.div`
         color: #fff;
         background: #020109;
         border-radius: 4px;
-        padding: 5px;
+        padding: 10px 5px;
         min-width: 150px;
         text-align: center;
         display: none;
@@ -59,7 +59,7 @@ export const Container = styled.div`
 
         .tag-edit {
             position: absolute;
-            top: 7px;
+            top: 12px;
             left: 10px;
         }
     }
@@ -71,7 +71,7 @@ export const Container = styled.div`
         border-top: inherit;
         position: absolute;
         bottom: 100%;
-        left: 10px;
+        left: 20px;
     }
     .tag-name { 
         font-size: 11px; 

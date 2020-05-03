@@ -52,9 +52,13 @@ export const Container = styled.div`
     .materia-holder .build { 
         background: #040F1E; 
         box-shadow: 0 5px 11px 0 rgba(61,157,226,0.15);
-        width: 20px;
-        height: 20px;
-        border-radius: 20px;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+    }
+    .materia-holder .build::before {
+        width: 14px;
+        height: 14px;
     }
 
     .materia-holder { margin-bottom: 40px; }

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import AuthContext from '../../contexts/auth'; 
 
 import Header from '../../components/Header';
 
@@ -12,6 +13,8 @@ import aerith from '../../images/aerith.png';
 import red from '../../images/red-xiii.png';
 
 export default function Home() {
+  const { user } = useContext(AuthContext);
+
   return (
     <Container>
       <Header />
@@ -23,7 +26,7 @@ export default function Home() {
       <div className="box-character">
         <div>
           <span className="character-name">Cloud Strife</span>
-          <span className="character-builds">Builds: 1</span>
+          <span className="character-builds">Builds: 0</span>
 
           <div className="character-builds-holder">
             <Link to="/profile"><div className="build"></div></Link>

@@ -43,14 +43,14 @@ export const Container = styled.div`
 
     .tag {
         position: absolute;
-        top: -35px;
-        right: -10px !important;
+        top: -55px;
+        right: -20px !important;
         left: inherit !important;
         margin: auto;
         color: #fff;
         background: #020109;
         border-radius: 4px;
-        padding: 5px;
+        padding: 10px 5px;
         min-width: 100px;
         text-align: center;
         display: none;
@@ -63,7 +63,7 @@ export const Container = styled.div`
         position: absolute;
         top: 100%;
         left: inherit !important;
-        right: 11px;
+        right: 25px;
     }
     .tag-name { 
         font-size: 11px; 

@@ -13,21 +13,19 @@ import accessory from '../../images/icon-accessory.png';
 
 export default function Profile() {
     const [weaponSlots, setWeaponSlots] = useState([
-        { spot: 1, conn: true },
-        { spot: 2, conn: false },
-        { spot: 3, conn: true },
-        { spot: 4, conn: false },
-        { spot: 5, conn: false },
-        { spot: 6, conn: false },
-        { spot: 7, conn: false },
-        { spot: 8, conn: false },
+        { weapon: 0, conn: false },
+        { weapon: 1, conn: false },
+        { weapon: 2, conn: false },
+        { weapon: 3, conn: false },
+        { weapon: 4, conn: false },
+        { weapon: 5, conn: false },
     ]);
 
     const [armorSlots, setArmorSlots] = useState([
-        { spot: 1, conn: true },
-        { spot: 2, conn: false },
-        { spot: 3, conn: true },
-        { spot: 4, conn: false },
+        { armor: 0, conn: false },
+        { armor: 1, conn: false },
+        { armor: 2, conn: false },
+        { armor: 3, conn: false },
     ]);
     
     return (
