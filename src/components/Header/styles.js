@@ -6,6 +6,8 @@ export const Container = styled.header`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 100;
 
     img { max-width: 130px; }
 

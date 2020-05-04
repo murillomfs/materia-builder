@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import AuthContext from '../../contexts/auth';
+import { useParams } from 'react-router-dom';
 import { FiChevronDown } from 'react-icons/fi';
 
 import { Container } from './styles';
@@ -12,6 +14,12 @@ import equipment from '../../images/icon-equipment.png';
 import accessory from '../../images/icon-accessory.png';
 
 export default function Profile() {
+    const { user } = useContext(AuthContext);
+    let { slug, id } = useParams();
+    
+    const [character, setCharacter] = useState(slug);
+    const selectedCharacter = user.characters.find(char => char.slug === character );
+
     const [weaponSlots, setWeaponSlots] = useState([
         { weapon: 0, conn: false },
         { weapon: 1, conn: false },
@@ -32,13 +40,15 @@ export default function Profile() {
         <Container>
             <Header />
 
+            {/* <img src={require(`../../images/bg-${selectedCharacter.slug}.png`)} className="bg" alt="" /> */}
+
             <div className="content">
                 <div className="character-builds-holder">
                     <div className="build"></div>
                     <div className="build"></div>
                 </div>
 
-                <h1>Cloud Strife</h1>
+                <h1>{selectedCharacter.bio}</h1>
 
                 <div className="box-select">
                     <label htmlFor="weapon">

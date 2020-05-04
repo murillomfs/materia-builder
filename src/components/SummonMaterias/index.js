@@ -33,7 +33,7 @@ export default function SummonMaterias() {
         setSelect();
         handleChangeMateria(select);
 
-        selectedMateriaName !== '-- empty' ? $('.summon-holder').addClass('summon') : console.log('nenhuma summon selecionada');
+        selectedMateriaName !== '-- empty' ? $('.summon-holder').addClass('summon') : console.log();
     }, [select]);
 
     function handleChangeMateria(select) {

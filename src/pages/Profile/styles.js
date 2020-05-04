@@ -1,14 +1,22 @@
 import styled from 'styled-components';
 
-import bgCloud from '../../images/bg-cloud.png';
+// import bgCloud from '../../images/bg-cloud.png';
 
 export const Container = styled.div`
     width: 100%;
     min-height: 100vh;
-    background: url(${bgCloud}) right center no-repeat;
+    position: relative;
     background-size: cover;
 
     .content h1 { margin-bottom: 10px; }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 80%;
+        opacity: .8;
+    }
 
     .box-select {
         margin-bottom: 0;

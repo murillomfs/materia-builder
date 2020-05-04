@@ -60,8 +60,7 @@ export default function ArmorMaterias({ armorSlots }) {
     const [select, setSelect] = useState();
     const [list, setList] = useState(user);
 
-    useEffect(() => {
-        console.log(selectedBuild);  
+    useEffect(() => { 
         setSelect();
         handleChangeMateria(select);
     }, [select]);

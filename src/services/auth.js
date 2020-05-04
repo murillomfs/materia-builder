@@ -25,11 +25,14 @@ export function signIn() {
                                             { weapon: 5, name: '-- empty', type: '' },
                                             { weapon: 6, name: '-- empty', type: '' },
                                         ],
+                                        summon: [
+                                            { summon: 0, name: '-- empty', type: '' },
+                                        ],
                                         armor: [
                                             { armor: 0, name: '-- empty', type: '' },
                                             { armor: 1, name: '-- empty', type: '' },
                                             { armor: 2, name: '-- empty', type: '' },
-                                            { armor: 3, name: '-- empty', type: '' }
+                                            { armor: 3, name: '-- empty', type: '' },
                                         ],
                                     },
                                 },
@@ -39,7 +42,32 @@ export function signIn() {
                             id: 2,
                             bio: 'Tifa Lockhart',
                             slug: 'tifa',
-                            builds: [],
+                            builds: [
+                                {
+                                    id: 1,
+                                    name: 'Combo Slice',
+                                    build: {
+                                        weapon: [
+                                            { weapon: 0, name: '-- empty', type: '' },
+                                            { weapon: 1, name: '-- empty', type: '' },
+                                            { weapon: 2, name: '-- empty', type: '' },
+                                            { weapon: 3, name: '-- empty', type: '' },
+                                            { weapon: 4, name: '-- empty', type: '' },
+                                            { weapon: 5, name: '-- empty', type: '' },
+                                            { weapon: 6, name: '-- empty', type: '' },
+                                        ],
+                                        summon: [
+                                            { summon: 0, name: '-- empty', type: '' },
+                                        ],
+                                        armor: [
+                                            { armor: 0, name: '-- empty', type: '' },
+                                            { armor: 1, name: '-- empty', type: '' },
+                                            { armor: 2, name: '-- empty', type: '' },
+                                            { armor: 3, name: '-- empty', type: '' },
+                                        ],
+                                    },
+                                }
+                            ],
                         },
                         {
                             id: 3,
@@ -50,7 +78,7 @@ export function signIn() {
                         {
                             id: 4,
                             bio: 'Aerith Gainsborough',
-                            slug: 'cloud',
+                            slug: 'aerith',
                             builds: [],
                         },
                         {
